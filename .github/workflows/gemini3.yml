@@ -23,7 +23,7 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd HolidayTravelVehicles 
+        cd HolidayTravelVehicles/src 
         javac Main.java
         java Main
       # Compile java file from directory
