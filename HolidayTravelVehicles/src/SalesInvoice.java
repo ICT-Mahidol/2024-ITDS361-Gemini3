@@ -1,19 +1,14 @@
-package HolidayTravelVehicles;
-
-import java.util.Set;
-
 public class SalesInvoice {
-    
     private String invoiceNumber;
     private Customer customer;
     private Vehicle purchasedVehicle;
-    private Set<DealerInstalledOption> dealerInstalledOptions;
+    private DealerInstalledOption[] dealerInstalledOptions;
     private double taxes;
     private double licenseFees;
     private double finalNegotiatedPrice;
 
     public SalesInvoice(String invoiceNumber, Customer customer, Vehicle purchasedVehicle,
-                        Set<DealerInstalledOption> dealerInstalledOptions, double taxes, double licenseFees) {
+                        DealerInstalledOption[] dealerInstalledOptions, double taxes, double licenseFees) {
         this.invoiceNumber = invoiceNumber;
         this.customer = customer;
         this.purchasedVehicle = purchasedVehicle;
@@ -25,7 +20,10 @@ public class SalesInvoice {
 
     // Calculate total cost including options, taxes, and fees
     public double calculateTotalCost() {
-        double optionsCost = dealerInstalledOptions.stream().mapToDouble(DealerInstalledOption::getPrice).sum();
+        double optionsCost = 0;
+        for (DealerInstalledOption option : dealerInstalledOptions) {
+            optionsCost += option.getPrice();
+        }
         return purchasedVehicle.getBaseCost() + optionsCost + taxes + licenseFees;
     }
 
@@ -57,11 +55,11 @@ public class SalesInvoice {
         this.purchasedVehicle = purchasedVehicle;
     }
 
-    public Set<DealerInstalledOption> getDealerInstalledOptions() {
+    public DealerInstalledOption[] getDealerInstalledOptions() {
         return dealerInstalledOptions;
     }
 
-    public void setDealerInstalledOptions(Set<DealerInstalledOption> dealerInstalledOptions) {
+    public void setDealerInstalledOptions(DealerInstalledOption[] dealerInstalledOptions) {
         this.dealerInstalledOptions = dealerInstalledOptions;
     }
 
@@ -80,5 +78,8 @@ public class SalesInvoice {
     public void setLicenseFees(double licenseFees) {
         this.licenseFees = licenseFees;
     }
-}
 
+    public void setFinalNegotiatedPrice(double finalNegotiatedPrice) {
+        this.finalNegotiatedPrice = finalNegotiatedPrice;
+    }
+}

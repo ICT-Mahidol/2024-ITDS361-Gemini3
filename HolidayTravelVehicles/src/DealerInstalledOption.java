@@ -1,4 +1,3 @@
-package HolidayTravelVehicles;
 
 public class DealerInstalledOption {
     
