@@ -23,6 +23,6 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd natawat/HolidayTravelVehicles 
+        cd HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
