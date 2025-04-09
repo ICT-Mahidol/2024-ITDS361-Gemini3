@@ -5,7 +5,7 @@
 
 ## **Usecase Description Create an observing program**
 ![image](https://github.com/user-attachments/assets/8a06d31c-8330-43a8-9637-c76d1bb69f42)
-![image](![image](https://github.com/user-attachments/assets/26390120-b256-4e9c-8fbb-6025409112a6)
+![image](https://github.com/user-attachments/assets/26390120-b256-4e9c-8fbb-6025409112a6)
 
 ## **Activity Diagram Create an observing program**
 ![image]()
