@@ -33,7 +33,7 @@
 ![image]()
 
 ## **Activity Diagram UC003**
-![Activity Diagram_ Submit Observing Program to the System (![image](https://github.com/user-attachments/assets/197e6c71-5595-4e6c-a4ca-8f1fb2b79f25)
+(![image](https://github.com/user-attachments/assets/197e6c71-5595-4e6c-a4ca-8f1fb2b79f25)
 )])
 
 ## **Sequence Diagrams UC003**  
