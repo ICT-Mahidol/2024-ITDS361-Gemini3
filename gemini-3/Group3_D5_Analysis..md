@@ -22,7 +22,8 @@
 ![image](https://github.com/user-attachments/assets/cc4208da-4838-416c-8b35-35e73e000b0d)
 
 ## **Sequence Diagrams Access collected astronomical data**  
-![image]()
+![image](https://github.com/user-attachments/assets/5eae6266-4b22-45f7-82c9-27aa4baffae7)
+
 
 ============================================================================================
 
