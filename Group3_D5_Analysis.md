@@ -19,7 +19,7 @@
 ![image](https://github.com/user-attachments/assets/1d86f1f7-70e0-44ad-bf20-5302ad8dd0c6)
 
 ## **Activity Diagram Access collected astronomical data**
-![image]()
+![image](https://github.com/user-attachments/assets/cc4208da-4838-416c-8b35-35e73e000b0d)
 
 ## **Sequence Diagrams Access collected astronomical data**  
 ![image]()
