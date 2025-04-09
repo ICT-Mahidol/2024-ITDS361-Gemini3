@@ -33,7 +33,8 @@
 ![image](https://github.com/user-attachments/assets/197e6c71-5595-4e6c-a4ca-8f1fb2b79f25)
 
 ## **Sequence Diagrams Execute approved science plan**  
-![แบบแผนที่ยังไม่ได้ตั้งชื่อ drawio (1)]()
+![image](https://github.com/user-attachments/assets/1984b332-63fd-4680-8528-941e92405e41)
+
 
 ============================================================================================
 
