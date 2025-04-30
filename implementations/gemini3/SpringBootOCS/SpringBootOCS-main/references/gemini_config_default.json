@@ -1,0 +1,127 @@
+{
+  "telescope": {
+    "name": "Gigantic Observatory Telescope",
+    "location": {
+      "latitude": 34.05,
+      "longitude": -118.25,
+      "altitude": 2500
+    },
+    "optics": {
+      "primary_mirror": {
+        "diameter_meters": 10.4,
+        "coating_material": "Aluminum",
+        "focal_length_meters": 120.5
+      },
+      "secondary_mirror": {
+        "diameter_meters": 2.5,
+        "adjustable": true
+      },
+      "field_of_view_degrees": 1.2
+    },
+    "mount": {
+      "type": "Altazimuth",
+      "max_speed": {
+        "azimuth_deg_per_sec": 1.5,
+        "elevation_deg_per_sec": 1.2
+      },
+      "tracking": {
+        "mode": "Auto",
+        "max_tracking_error_arcsec": 0.05,
+        "adaptive_optics": true
+      }
+    },
+    "instruments": [
+      {
+        "name": "Spectrograph",
+        "type": "High-Resolution",
+        "wavelength_range_nm": [400, 700],
+        "cooling_temperature_c": -100
+      },
+      {
+        "name": "Infrared Camera",
+        "type": "Near-Infrared",
+        "wavelength_range_nm": [900, 2500],
+        "ccd_resolution": "8192x8192",
+        "exposure_time_seconds": {
+          "min": 0.01,
+          "max": 1200
+        }
+      },
+      {
+        "name": "Wide-Field Imager",
+        "type": "CCD",
+        "ccd_resolution": "4096x4096",
+        "filter_wheel": ["U", "B", "V", "R", "I", "Halpha"],
+        "readout_noise_electrons": 3.2
+      }
+    ],
+    "network": {
+      "ip_address": "192.168.1.100",
+      "port": 8080,
+      "protocol": "TCP",
+      "remote_control": true
+    },
+    "environment_monitoring": {
+      "wind_speed_mps": {
+        "current": 5.2,
+        "shutdown_threshold": 25.0
+      },
+      "humidity_percent": {
+        "current": 42,
+        "shutdown_threshold": 85
+      },
+      "temperature_c": {
+        "current": 12.5,
+        "operational_range": [-20, 35]
+      },
+      "cloud_coverage_percent": 10
+    },
+    "safety": {
+      "emergency_shutdown_enabled": true,
+      "shutdown_conditions": [
+        "high_wind",
+        "high_humidity",
+        "power_failure"
+      ],
+      "backup_power": {
+        "battery_runtime_hours": 4,
+        "generator_available": true
+      }
+    },
+    "control_software": {
+      "version": "2.3.1",
+      "auto_update": true,
+      "log_directory": "/var/logs/telescope",
+      "last_update": "2025-03-10"
+    },
+    "scheduling": {
+      "observation_queue": [
+        {
+          "target": "Andromeda Galaxy",
+          "coordinates": {
+            "ra_hours": 0.712,
+            "dec_degrees": 41.269
+          },
+          "priority": "high",
+          "exposure_time_seconds": 300,
+          "filters": ["R", "V", "B"]
+        },
+        {
+          "target": "Betelgeuse",
+          "coordinates": {
+            "ra_hours": 5.919,
+            "dec_degrees": 7.407
+          },
+          "priority": "medium",
+          "exposure_time_seconds": 600,
+          "filters": ["Halpha", "I"]
+        }
+      ],
+      "auto_scheduler_enabled": true,
+      "maintenance_schedule": {
+        "next_calibration_date": "2025-06-10",
+        "last_maintenance_date": "2025-03-01"
+      }
+    }
+  }
+}

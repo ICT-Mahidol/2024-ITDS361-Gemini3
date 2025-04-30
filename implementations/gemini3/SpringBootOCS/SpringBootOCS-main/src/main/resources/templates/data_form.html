@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Access Astronomical Data</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>Access Astronomical Data</h2>
+
+<form action="/data/get" method="post">
+    <label>Science Plan ID:</label>
+    <input type="number" name="planId" required><br><br>
+    <button type="submit">Fetch Data</button>
+</form>
+
+<br>
+<a href="/home">Back to Home</a>
+</body>
+</html>

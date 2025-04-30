@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Astronomical Data Search</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h2>Search Astronomical Data</h2>
+<form action="/data/search" method="post">
+  <label>Object Name:</label>
+  <input type="text" name="keyword" required>
+  <button type="submit">Search</button>
+</form>
+
+<div th:if="${results}">
+  <h3>Search Results:</h3>
+  <table border="1">
+    <tr>
+      <th>Object Name</th>
+      <th>RA</th>
+      <th>DEC</th>
+      <th>Magnitude</th>
+      <th>Date</th>
+    </tr>
+    <tr th:each="data : ${results}">
+      <td th:text="${data.objectName}"></td>
+      <td th:text="${data.rightAscension}"></td>
+      <td th:text="${data.declination}"></td>
+      <td th:text="${data.magnitude}"></td>
+      <td th:text="${data.observationDate}"></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
