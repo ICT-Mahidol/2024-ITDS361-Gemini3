@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Data Result</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h2 th:text="${message}">Result</h2>
+
+<div th:if="${astroData != null}">
+  <h3>Downloaded Images:</h3>
+  <p>Data found. Number of images: (check log or console, actual image display not implemented)</p>
+</div>
+
+<br>
+<a href="/data/form">Try Another Plan</a> |
+<a href="/home">Back to Home</a>
+</body>
+</html>
